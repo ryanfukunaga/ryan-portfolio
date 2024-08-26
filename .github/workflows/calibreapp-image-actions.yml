@@ -1,18 +1,1 @@
-name: Compress Images
 
-on: 
-  push:
-    branches:
-      - main
-
-jobs:
-  compress_images:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout repository content
-      uses: actions/checkout@v2
-
-    - name: Compress images
-      uses: calibreapp/image-actions@main
-      with:
-        quality: '80'
